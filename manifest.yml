@@ -1,0 +1,14 @@
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  domain: mybluemix.net
+  name: cf-xpages
+  host: cf-xpages
+  disk_quota: 1024M
+  services:
+  - cf-xpages-XPagesData
+  env:
+    APP_HOME_URL: /ToDo_design.nsf
+    APP_PRELOAD_DB: ToDo_design.nsf
+  buildpack: xpages_buildpack
